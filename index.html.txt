@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #fffffff;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #fffffff;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Who is Syed? {background-color: #808080;}
+#Coding {background-color: #808080;}
+#Collaboration {background-color: #808080;}
+#Tools {background-color: #808080;}
+#Blah! {background-color: #808080;}
+</style>#808080d>
+<body>
+
+<button class="tablink" onclick="openPage('Who is Syed?', this, 'red')">Who is Syed?</button>
+<button class="tablink" onclick="openPage('Coding', this, 'green')" id="defaultOpen">Coding</button>
+<button class="tablink" onclick="openPage('Collaboration', this, 'blue')">Collaboration</button>
+<button class="tablink" onclick="openPage('Tools', this, 'orange')">Tools</button>
+<button class="tablink" onclick="openPage('Blah!', this, 'orange')">Blah!</button>
+
+<div id="Who is Syed?" class="tabcontent">
+  <h3>Home</h3>
+  <p>Syed is game for breaking boundaries, building bridges, crossing oceans of irrelevance -- one breath and one word at a time...</p>
+</div>
+
+<div id="Coding" class="tabcontent">
+  <h3>Coding</h3>
+  <p>HTML and CSS with a dash of Python</p> 
+</div>
+
+<div id="Collaboration" class="tabcontent">
+  <h3>Collaboration</h3>
+  <p>Build forces with SMEs and create a content universe that the audience wants to live in.</p>
+</div>
+
+<div id="Tools" class="tabcontent">
+  <h3>About</h3>
+  <p>Repetition is branding.</p>
+</div>
+
+
+<div id="Blah!" class="tabcontent">
+  <h3>Blah!</h3>
+  <p>Some brain teasing content.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

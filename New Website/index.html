@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 50%;
+  margin: 0;
+  font-family: courier new, monospace;
+}
+/* Header/Logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc7c;
+  color: purple;
+  font-size: 20px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>A wannabe documentarian</h1>
+  <p><strong>Breaking boundaries, building bridges, and crossing the oceans of irrelevance</strong></p>
+
+
+<button class="tablink" onclick="openPage('Syed who?', this, 'green')" id="defaultOpen">Syed who?</button>
+<button class="tablink" onclick="openPage('Coding', this, 'green')">Coding</button>
+<button class="tablink" onclick="openPage('Collaboration', this, 'green')">Collaboration</button>
+<button class="tablink" onclick="openPage('tools', this, 'green')">tools</button>
+<button class="tablink" onclick="openPage('Blah!', this, 'green')">Blah!</button>
+
+
+</style>
+</div>
+</div>
+
+<div id="Syed who?" class="tabcontent">
+  <h3>Syed who?</h3>
+  <p>Syed is game for breaking boundaries, building bridges, crossing oceans of irrelevance -- one breath and one word at a time.</p>
+  He is a foot soldier on a mission and a movement to create a content universe envisaged by the Subject Matter Expert (SME).
+
+<p>Generally, a technical writer strives:</p>
+<ul>
+
+<li>to remain committed to the SME</li>
+
+<li>to establish the rules of the SME in the land of the SME</li>
+
+<li>to clash with confusion, exterminate content gaps, and weed out any room for negative user experience </li>
+
+<li>to reach out to the SME for a helping hand to complete the content universe</li>
+
+<li>to capture all the scenarios with whatever level of knowledge possessed</li>
+
+<li>to remain committed to address the complex issues faced by the society</li>
+
+<li>to believe that burden does not go beyond his capacity and that there is no room for excuse </li>
+
+<li>to start barefoot, seek help, and build on the content, brick by brick</li>
+
+<li>to absorb whatever information she gets</li>
+
+<li>to remain unmoved if most SMEs and other sources close doors on her face </li>
+
+<li>to appreciate even if only few voices come forward for knowledge sharing </li>
+
+<li>to believe that documentation is not an easy task</li>
+
+<li>to not spend excessive time learning about the product, but quickly shifts to end-to-end user journey </li>
+
+<li>to believe that empty words are part of the problem</li>
+
+<li>to not believe in just desserts</li>
+
+<li>to believe help cannot be extracted by force, but what comes voluntarily</li>
+
+<li>to believe that this mission is not for few days, months, or years... it's eternal</li>
+
+<li>to document whatever knowledge has been gained</li>
+
+<li>to believe that there is no ideal, sweet time for documentation </li>
+
+<li>to keep promise of comprehensive documentation and does not hesitate to seek help from SMEs at any time</li>
+
+<li>to remain motivated</li>
+
+<li>to start documentation early</li>
+
+<li>to borrow thoughts from anyone involved</li>
+
+<li>to turn losses into wins by putting trust in documentation</li>
+
+<li>to believe that SMEs will remain firm and cooperative in their support to documentation</li>
+
+<li>to believe that she is not knowledgeful about the product she is documenting</li>
+
+<li>to provide service that benefits people</li>
+
+<li>Not for material or personal profit</li>
+
+<li>to provide a sense of security through her brute force of competence</li>
+
+<li>to consider that people have the right to know the product like the back of their hand </li>
+
+<li>to believe that she is not the boss</li>
+
+<li>to believe that misinformation and information scarcity has no place</li>
+
+<li>to believe that it is HER time and she is duty bound to listen to the SME</li>
+
+<li>to believe that her job is to make sure the SMEs are heard and respected</li>
+
+<li>to believe that HER COMMITMENT IS TO LISTEN TO THE SME</li>
+
+<li>to believe that the SME IS RESPONSIBLE for the success or failure of the mission</li>
+
+<li>to believe that SME knows the rules and the regulations of using the product</li>
+
+<li>to lead documentation with new thoughts and ideas</li>
+
+<li>to decry old methods and ideas</li>
+
+<li>to believe that SHE is temporary, but SME is forever </li>
+
+<li>to remain responsible for nothing but instant and thoughtful action and clear communication</li>
+
+<li>to believe that a product should neither be insulted nor feared, and it should be explored and used fully</li> 
+
+<li>to spot content gaps lying in the open (Nobody can get away by burying their head in the sand)</li>
+
+<li>to find answers to the How part for the product team</li>
+
+<li>to find answers to the Why part for the leadership.</li>  
+</div>
+
+<div id="Coding" class="tabcontent">
+  <h3>Coding</h3>
+  <p>HTML and CSS with a dash of Python</p> 
+</div>
+
+<div id="Collaboration" class="tabcontent">
+  <h3>Collaboration</h3>
+  <p>Build forces with SMEs and create a content universe that the audience wants to live in.</p>
+  <a href="../New Website/Content/Collaboration/Perils of a Naive Technical Writer.html">Perils of a Naive Technical Writer</a>
+</div>
+
+<div id="tools" class="tabcontent">
+  <h3>tools</h3>
+  <p>Repetition is branding.</p>
+</div>
+
+
+<div id="Blah!" class="tabcontent">
+  <h3>Blah!</h3>
+  <p>Some brain teasing content.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
